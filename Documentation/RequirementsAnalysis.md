@@ -62,9 +62,7 @@ The system should:
 For example, if stock falls below a minimum level, it should be flagged for restocking.
 
 ### Sales Management
-
 The system should handle sales transactions in the supermarket.
-
 The system should:
 
 - Record sales transactions
@@ -72,9 +70,7 @@ The system should:
 - Automatically reduce stock after a sale is completed
 
 ### Reports
-
 The system should give useful reports for decision making.
-
 The system should provide:
 
 - Low stock report
@@ -83,7 +79,6 @@ The system should provide:
 - Supplier stock report
 
 ## Non-Functional Requirements
-
 ### Performance
 The system should allow fast searching and efficient data processing.
 
@@ -100,9 +95,19 @@ The system should be simple and easy for supermarket staff to use.
 The system should ensure data integrity and prevent invalid inputs.
 
 ## Technologiess
-
 - C#
 - WinForms
 - SQL Server
 - Entity Framework Core
 - Custom Data Structures (BST / AVL Tree for searching)
+
+### Algorithms and Data Structures
+
+The system will use a custom Binary Search Tree (BST)
+to support efficient product searching by barcode.
+
+A linear search algorithm will also be implemented
+for product name searches.
+
+These algorithms will be analysed using Big-O
+time complexity notation.
