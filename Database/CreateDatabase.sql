@@ -74,3 +74,14 @@ CREATE TABLE Stock
     FOREIGN KEY(ProductID)
     REFERENCES Products(ProductID)
 );
+
+CREATE TABLE Sales
+(
+    SaleID INT IDENTITY(1,1) PRIMARY KEY,
+
+    SaleDate DATETIME NOT NULL,
+
+    TotalAmount DECIMAL(10,2) NOT NULL,
+
+    PaymentMethod VARCHAR(50)
+);
