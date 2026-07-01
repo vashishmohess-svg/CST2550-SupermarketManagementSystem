@@ -60,3 +60,39 @@ VALUES
 ('500002','Toothpaste','Colgate',5,5,75.00,'2027-11-01','2026-07-20'),
 ('500003','Soap Bar','Lux',5,5,25.00,'2027-10-01','2026-07-20'),
 ('500004','Body Lotion','Nivea',5,5,145.00,'2027-09-01','2026-07-20');
+
+
+-- Stock
+INSERT INTO Stock
+(
+ProductID,
+Quantity,
+LowStockLevel,
+StockStatus
+)
+VALUES
+
+(1,50,10,'Available'),
+(2,45,10,'Available'),
+(3,40,10,'Available'),
+(4,100,20,'Available'),
+
+(5,30,10,'Available'),
+(6,25,10,'Available'),
+(7,15,10,'Available'),
+(8,12,10,'Available'),
+
+(9,4,10,'Low Stock'),
+(10,3,10,'Low Stock'),
+(11,2,10,'Low Stock'),
+(12,8,10,'Low Stock'),
+
+(13,20,10,'Available'),
+(14,15,10,'Available'),
+(15,25,10,'Available'),
+(16,18,10,'Available'),
+
+(17,12,10,'Available'),
+(18,6,10,'Low Stock'),
+(19,5,10,'Low Stock'),
+(20,10,10,'Available');
