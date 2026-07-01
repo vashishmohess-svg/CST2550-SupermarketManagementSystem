@@ -57,3 +57,20 @@ CREATE TABLE Products
     FOREIGN KEY(SupplierID)
     REFERENCES Suppliers(SupplierID)
 );
+
+CREATE TABLE Stock
+(
+    StockID INT IDENTITY(1,1) PRIMARY KEY,
+
+    ProductID INT UNIQUE NOT NULL,
+
+    Quantity INT NOT NULL,
+
+    LowStockLevel INT NOT NULL,
+
+    StockStatus VARCHAR(50),
+
+    CONSTRAINT FK_Stock_Product
+    FOREIGN KEY(ProductID)
+    REFERENCES Products(ProductID)
+);
