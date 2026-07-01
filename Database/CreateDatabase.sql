@@ -85,3 +85,24 @@ CREATE TABLE Sales
 
     PaymentMethod VARCHAR(50)
 );
+
+CREATE TABLE SaleItems
+(
+    SaleItemID INT IDENTITY(1,1) PRIMARY KEY,
+
+    SaleID INT NOT NULL,
+
+    ProductID INT NOT NULL,
+
+    Quantity INT NOT NULL,
+
+    UnitPrice DECIMAL(10,2) NOT NULL,
+
+    CONSTRAINT FK_SaleItem_Sale
+    FOREIGN KEY (SaleID)
+    REFERENCES Sales(SaleID),
+
+    CONSTRAINT FK_SaleItem_Product
+    FOREIGN KEY (ProductID)
+    REFERENCES Products(ProductID)
+);
