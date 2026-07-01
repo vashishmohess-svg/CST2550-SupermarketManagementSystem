@@ -1,4 +1,4 @@
--- Categories
+--Categories
 INSERT INTO Categories (CategoryName)
 VALUES
 ('Beverages'),
@@ -7,7 +7,7 @@ VALUES
 ('Household'),
 ('Personal Care');
 
--- Suppliers
+--Suppliers
 INSERT INTO Suppliers
 (
 SupplierName,
@@ -22,7 +22,7 @@ VALUES
 ('Quality Traders','57771122','quality@suppliers.mu','Rose Hill'),
 ('Sunrise Wholesale','59881100','sunrise@suppliers.mu','Quatre Bornes');
 
--- Products
+--Prducts
 INSERT INTO Products
 (
 Barcode,
@@ -62,7 +62,7 @@ VALUES
 ('500004','Body Lotion','Nivea',5,5,145.00,'2027-09-01','2026-07-20');
 
 
--- Stock
+--STock
 INSERT INTO Stock
 (
 ProductID,
@@ -96,3 +96,18 @@ VALUES
 (18,6,10,'Low Stock'),
 (19,5,10,'Low Stock'),
 (20,10,10,'Available');
+
+- Sales
+INSERT INTO Sales
+(
+SaleDate,
+TotalAmount,
+PaymentMethod
+)
+VALUES
+
+('2026-07-01 09:30:00',188.00,'Cash'),
+('2026-07-01 11:15:00',240.00,'Card'),
+('2026-07-01 14:20:00',135.00,'Cash'),
+('2026-07-02 10:10:00',320.00,'Card'),
+('2026-07-02 16:45:00',210.00,'Cash');
