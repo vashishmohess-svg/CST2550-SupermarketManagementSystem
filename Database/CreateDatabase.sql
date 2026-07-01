@@ -1,0 +1,5 @@
+IF DB_ID('SupermarketDB') IS NULL
+BEGIN
+    CREATE DATABASE SupermarketDB;
+END
+GO
