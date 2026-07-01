@@ -28,3 +28,32 @@ CREATE TABLE Suppliers
     Address VARCHAR(255)
 );
 GO
+
+CREATE TABLE Products
+(
+    ProductID INT IDENTITY(1,1) PRIMARY KEY,
+
+    Barcode VARCHAR(50) NOT NULL UNIQUE,
+
+    Title VARCHAR(150) NOT NULL,
+
+    Brand VARCHAR(100),
+
+    CategoryID INT NOT NULL,
+
+    SupplierID INT NOT NULL,
+
+    Price DECIMAL(10,2) NOT NULL,
+
+    ExpiryDate DATE NULL,
+
+    RestockDate DATE NULL,
+
+    CONSTRAINT FK_Product_Category
+    FOREIGN KEY(CategoryID)
+    REFERENCES Categories(CategoryID),
+
+    CONSTRAINT FK_Product_Supplier
+    FOREIGN KEY(SupplierID)
+    REFERENCES Suppliers(SupplierID)
+);
